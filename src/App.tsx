@@ -14,13 +14,13 @@ function getRandomName(): string {
   return `Clock-${value}`;
 }
 
-export class App extends React.Component<State> {
+export class App extends React.Component<{}, State> {
   state: Readonly<State> = {
     clockName: 'Clock-0',
     hasClock: true,
   };
 
-  clockNameTimerId = 0;
+  clockNameTimerId: number = 0;
 
   handleDocumentClick = () => {
     this.setState({ hasClock: true });

@@ -13,7 +13,7 @@ export class Clock extends React.Component<Props, State> {
     today: new Date(),
   };
 
-  todayTimerId = 0;
+  todayTimerId: number = 0;
 
   componentDidMount(): void {
     this.todayTimerId = window.setInterval(() => {
